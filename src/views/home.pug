@@ -9,13 +9,21 @@ html(lang="en")
     body 
         header
             h1 Zoom
+            
         main
-            form#nick
-                input(type="text", placeholder="choose a nickname", required )
-                button Save
-            ul
-            form#message
-                input(type="text", placeholder="write a msg", required)
-                button Send
-
+            #welcome
+               
+                form
+                    input(id ="nickname" placeholder="nickName", required, type="text")
+                    input(id = "roomnum" placeholder="room name", required, type="text") 
+                    button Enter Room
+                h4 Open Rooms: 
+                ul
+            #room
+                h3
+                ul
+                form#msg
+                    input(placeholder="message", required, type="text")
+                    button Send 
+        script(src="/socket.io/socket.io.js") 
         script(src="/public/js/app.js")
