@@ -156,7 +156,8 @@ socket.on("ice", (ice) => {
 
 function makeConnection() {
   myPeerConnection = new RTCPeerConnection(); //step1. peerConnection을 모두에게 공유
-  iceServers: [ //장치에게 우리의 공용주소를 알려줌: stun server
+  iceServers: [
+    //장치에게 우리의 공용주소를 알려줌: stun server
     {
       urls: [
         "stun:stun.l.google.com:19302",
